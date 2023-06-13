@@ -8,11 +8,11 @@ namespace ConnectDBTest
 {
 	public class DataAccess
 	{
-		public List<Food> GetFood(string food_group)
+		public List<StudentModel> GetStudents()
 		{
-			using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("Recipes")))
+			using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("Students")))
 			{
-				var output = connection.Query<Food>("select * from Food_Group").ToList();
+				var output = connection.Query<StudentModel>("select * from StudentData_Table").ToList();
 				return output;
 			}
 		}

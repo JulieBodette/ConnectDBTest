@@ -9,7 +9,7 @@ namespace ConnectDBTest
 	public partial class Page1 : Page
 	{
 
-		List<Food> fooddata = new List<Food>();
+		List<StudentModel> studentdata = new List<StudentModel>();
 		DataAccess db = new DataAccess();
 		public Page1()
 		{
@@ -24,8 +24,8 @@ namespace ConnectDBTest
 
 		private void Page1_Load(object sender, EventArgs e)
 		{
-			fooddata = db.GetFood("Breakfast");
-			dataGridView1.DataSource = fooddata;
+			studentdata = db.GetStudents();
+			dataGridView1.DataSource = studentdata;
 		}
 	}
 }
