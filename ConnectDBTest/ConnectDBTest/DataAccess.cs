@@ -12,7 +12,7 @@ namespace ConnectDBTest
 		{
 			using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("Students")))
 			{
-				var output = connection.Query<StudentModel>("select * from StudentData_Table").ToList();
+				var output = connection.Query<StudentModel>("select * from Students").ToList();
 				return output;
 			}
 		}
